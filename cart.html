@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 嵌入 font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- 嵌入 bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <!-- 嵌入 jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- 嵌入 cart -->
+    <link rel="stylesheet" href="css/cartStyle.css">
+</head>
+<body>
+
+    <section class="cart-page section-ptb">
+    <form action="/cart" method="post" enctype="multipart/form-data" novalidate>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 col-lg-9 col-md-8 col-12">
+                    <div class="cart-title">
+                        <h2>我的購物車 :</h2>
+                        <span class="cart-count">
+
+                            <!-- 輸出總共幾項商品 -->
+                            <span class="bigcounter">3</span>
+                            <span class="cart-item-title">項商品</span>
+                        </span>
+                    </div>
+
+                    <!-- 購物清單列表 -->
+                    <div class="item-wrap cart-item-wrap">
+                        
+                        <!-- 一項商品 start -->
+                        <ul class="cart-wrap">
+                            <!-- 商品資訊 -->
+                            <li class="item-info">
+
+                                <!-- 商品縮圖 -->
+                                <div class="item-img">
+
+                                    <!-- 連接至商品各自的頁面 -->
+                                    <a href="/products/bantch-blazar-hint?variant=40039008862357">
+                                        <!-- 蔬果照片 -->
+                                        <img src="//cdn.shopify.com/s/files/1/0412/8151/9765/products/11_150x150_crop_center.jpg?v=1660815830"/>
+                                    </a>
+                                </div>
+                                <div class="item-title">
+
+                                    <!-- 連接至商品各自的頁面 -->
+                                    <a href="/products/bantch-blazar-hint?variant=40039008862357">檸檬 Lemon</a>
+                                    <span class="item-option">
+                                        <span class="pro-variant-title">單位:</span>
+
+                                        <!-- 商品單位 -->
+                                        <span class="pro-variant-type">1顆</span>
+                                    </span><span class="item-option">
+                                        <span class="pro-variant-title">產地:</span>
+
+                                        <!-- 商品產地 -->
+                                        <span class="pro-variant-type">美國</span>
+                                    </span>
+
+                                    <span class="item-option">
+                                        <!-- 商品售價 -->
+                                        <span class="item-price">
+                                            $12.00
+                                        </span>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <!-- 商品購買數量 -->
+                            <li class="item-qty">
+                                <div class="product-quantity-action">
+                                    <div class="product-quantity" data-variant="40039008862357">
+                                        <div class="cart-plus-minus">
+
+                                            <!-- 數量減少按鈕 -->
+                                            <div class="dec qtybutton" onclick="q.value--;">-</div>
+
+                                            <!-- 直接輸入數量、顯示數量 -->
+                                            <input type="text" value="2" id="q" name="updates" class="qt" />
+											
+                                            <!-- 數量增加按鈕 -->
+                                            <div class="inc qtybutton" onclick="q.value++;">-</div>
+                                        </div>                                        
+
+                                    </div>
+                                </div>
+
+                                <!-- 移除該項商品 -->
+                                <div class="item-remove">
+                                    <span class="remove-wrap">
+                                        <a href="">移除此商品</a>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="item-price">
+                                <span class="amount full-price">
+
+                                    <!-- 該項商品小計(產品單價*數量) -->
+                                    <span class="money amount full-price-40039008862357">$ 36.00</span>
+                                </span>
+                            </li>
+                        </ul>
+                        <!-- 一項商品 end -->
+                        
+                        <!-- 以下測試時 顯示用的，連接後端後可刪 -->
+                        <ul class="cart-wrap">
+                            <li class="item-info">
+                                <div class="item-img">
+                                    <a href="/products/appetizing-bakery-bread?variant=42658172272789"><img src="//cdn.shopify.com/s/files/1/0412/8151/9765/products/4_54ab18db-ca26-4488-8ee4-a3da7056669a_150x150_crop_center.jpg?v=1660817632" alt="Appetizing bakery bread - 1kg / canada" /></a>
+                                </div>
+                                <div class="item-title">
+
+                                    <a href="/products/appetizing-bakery-bread?variant=42658172272789">高麗菜</a><span class="item-option">
+                                        <span class="pro-variant-title">單位:</span>
+                                        <span class="pro-variant-type">1斤</span>
+                                    </span><span class="item-option">
+                                        <span class="pro-variant-title">產地:</span>
+                                        <span class="pro-variant-type">台灣</span>
+                                    </span>
+
+                                    <span class="item-option">
+                                        <span class="item-price">
+                                           $28.00
+                                        </span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="item-qty">
+                                <div class="product-quantity-action">
+                                    <div class="product-quantity" data-variant="42658172272789">
+                                        <div class="cart-plus-minus">
+                                            <div class="dec qtybutton">-</div>
+                                            <input type="text" value="1" name="updates[]" class="qt" />
+                                            <div class="inc qtybutton">-</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-remove">
+                                    <span class="remove-wrap">
+                                        <a href="">移除此產品</a>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="item-price">
+                                <span class="amount full-price">
+                                    <span class="money amount full-price-42658172272789">$28.00</span>
+                                </span>
+                            </li>
+                        </ul>
+                        <!-- 以上測時時 顯示用的，連接後端後可刪 -->
+                        
+                    </div>
+
+                    <div class="cart-buttons">
+                        <a class="btn btn-style1" href="/collections/all">繼續購物</a>
+
+                        <!-- 清空購物車、跳至空購物車介面 -->
+                        <a class="btn btn-style1" href="">清除購物車</a>
+                    </div>
+
+                </div>
+
+                <div class="col-xl-3 col-lg-3 col-md-4 col-12">
+                    <div class="cart-total-wrap">
+                        <div class="cart-sub-total">
+                            <span class="subtotal-title">商品總額</span>
+                            <span class="amount subtotal">
+                                <!-- 商品總額 -->
+                                <span class="bold_cart_total" style="display:none !important;"></span>
+                                $64.00
+                            </span>
+                        </div>
+
+                        <!-- 宅配資訊 -->
+                        <div class="cart-sub-total cancelBorder1">
+                            <div class="shipping">
+                                <h3>宅配服務</h3>
+                                <div>
+                                    <label for="address">收件人</label>
+                                    <input type="text"
+                                    placeholder="ex: 王小明" 
+                                    id="addressee" 
+                                    name="addressee">
+                                </div>
+                                <div>
+                                    <label for="address">電話號碼</label>
+                                    <input type="text"
+                                    placeholder="ex: 09XX-XXX-XXX" 
+                                    id="addressee_phone_number" 
+                                    name="addressee_phone_number">
+                                </div>
+                                <div>
+                                    <label for="address">地址</label>
+                                    <input type="text"
+                                    placeholder="ex: 桃園市中壢區中北路200號" 
+                                    id="address" 
+                                    name="address">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cart-sub-total cancelBorder2">
+                            <span class="subtotal-title">運費</span>
+                        <span class="amount subtotal">
+                            <span class="bold_cart_total" style="display:none !important;"></span>
+                            $60.00
+                        </span>
+                        </div>
+                        <!-- 待處理 end -->
+
+                        <div class="cart-total">
+                            <span class="total-amount">
+                                <span class="total-title">總額</span>
+                                <span class="amount total-price">
+                                    <!-- 商品總額+60 -->
+                                    <span class="bold_cart_total" style="display:none !important;"></span>
+                                    $124.00
+                                </span>
+                            </span><div class="proceed-to-checkout">
+                                <a href="" class= "btn-style1 center">送出訂單</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    </section>
+    
+
+</body>
+</html>

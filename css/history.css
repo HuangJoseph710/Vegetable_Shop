@@ -1,0 +1,67 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+section{
+    margin-top: 60px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.tittle{
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 20px;
+    width: 600px;
+}
+
+.historyWrap{
+    border: 1px gray solid ;
+    border-radius: 7px;
+    justify-content: center; 
+    align-items: center;
+    width: 600px;
+    padding: 25px 40px;
+    background: #e5e5e5;
+    margin-bottom: 50px;
+}
+
+.historyWrap .shippingInfo .timeTittle{
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+.historyWrap .shippingInfo .addressee,
+.historyWrap .shippingInfo .phoneNum,
+.historyWrap .shippingInfo .address,
+.historyWrap .shippingInfo .totalPrice{
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+.historyWrap .shippingInfo .addressee span,
+.historyWrap .shippingInfo .phoneNum span,
+.historyWrap .shippingInfo .address span,
+.historyWrap .shippingInfo .totalPrice span{
+    font-size: 18px;
+    margin-left: 5px;
+    color: #252525;
+    font-weight: 400;
+}
+
+.goodsWrap{
+    display: flex;
+    justify-content: space-around;
+}
+
+.historyWrap .goodsList .goodsWrap .goodsName,
+.historyWrap .goodsList .goodsWrap .goodsQty,
+.historyWrap .goodsList .goodsWrap .goodsSubtotal{
+    width: 20%;
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 嵌入 font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- 嵌入 bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <!-- 嵌入 購物車按鈕 -->
+    <link rel="stylesheet" href="cartBtnStyle.css">
+    <!-- 嵌入 評論系統 -->
+    <link rel="stylesheet" href="ratingStyle.css">
+    <!-- 嵌入 商品介面 -->
+    <link rel="stylesheet" href="productInfoStyle.css">
+</head>
+<body>
+
+    <div class="productInfo row justify-content-center">
+        
+        <!-- 回到首頁 -->
+        <div class=".col-12">
+            <a href="index.html">
+                <div class="previousPage">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <span>回到首頁</span>
+                </div>
+            </a>
+        </div>
+        
+
+        <!-- 蔬果圖片 -->
+        <div class="imgArea position-relative d-flex justify-content-center align-items-center col-lg-6">
+            <img src="lemon.jpg" alt="蔬果照片" class="pic">
+        </div>
+
+        <!-- 文字說明 -->
+        <div class="textArea col-lg-6">
+
+            <!-- 顯示評分 -->
+            <div class="rating_wrap">
+                <div class="rating_review_cont d-flex d-flex align-items-center">
+                    <ul class="rating_star ul_li">
+                        <!-- 此處控制顯示星星數量 -->
+                        <li class="active"><i class="fas fa-star"></i></li>
+                        <li class="active"><i class="fas fa-star"></i></li>
+                        <li class="active"><i class="fas fa-star"></i></li>
+                        <li class="active"><i class="fas fa-star"></i></li>
+                        <li><i class="far fa-star"></i></li>
+                    </ul>
+                    <!-- 此處控制顯示訊息數量 -->
+                    <a href="#!" class="review">瀏覽 3 則評論</a>
+                </div>
+            </div>
+
+            <!-- 蔬果名稱 -->
+            <h2 class="product_detail_title">檸檬</h2>
+
+            <!-- 蔬果簡述 -->
+            <p class="product_detail_desc py-2">新鮮手工採摘檸檬，氣味芳香，酸甜可口，適合用來製作需要強烈酸甜滋味的料理 </p>
+            
+            <!-- 蔬果價格 -->
+            <h1>$ 12 / 斤</h1>
+			<p>庫存數量:</p>
+            <!-- 加入購物車 -->
+            <div class="addToCart">
+                <button onclick="" class="cartButton">
+                    <span>加入購物車</span>
+                    <div class="cart">
+                        <svg viewBox="0 0 36 26">
+                            <polyline points="1 2.5 6 2.5 10 18.5 25.5 18.5 28.5 7.5 7.5 7.5"></polyline>
+                            <polyline points="15 13.5 17 15.5 22 10.5"></polyline>
+                        </svg>
+                    </div>
+                </button>
+            
+                <script>
+                    document.querySelectorAll(".cartButton").forEach((button) =>
+                        button.addEventListener("click", (e) => {
+                            if (!button.classList.contains("loading")) {
+                                button.classList.add("loading");
+            
+                                setTimeout(() => button.classList.remove("loading"), 3700);
+                            }
+                            e.preventDefault();
+                        })
+                    );
+                </script>
+            </div>
+            
+            <!-- 蔬果詳細資料 -->
+            <div class="product_detail_content row mt-5">
+                <div class="col-lg-4">
+                    <h4 class="content_title mb-3">原產地</h4>
+                    <h5>美國</h5>
+                </div>
+                <div class="col-lg-8">
+                    <h4 class="content_title mb-3">保存期限</h4>
+                    <h5>冷藏保存約可放一個月</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- 留言板 -->
+        <div class="product_comment col-lg-6">
+            <h3 class="title_text">商品評論:<br></h3>
+            <ul class="review_comment_list ul_li_block">
+
+                <!-- 一則評論 start -->
+                <li class="review_comment_wrap">
+
+                    <!-- 評論者名字 -->
+                    <h4 class="admin_name">雷夢狂熱者
+                        <!-- 評論時間 -->
+                        <span class="comment_date">2022 / 9 / 21</span>
+                    </h4>
+                    <ul class="rating_star ul_li">
+                        <!-- 此處控制顯示星星數量 -->
+                        <li class="active"><i class="fas fa-star"></i></li>
+                        <li class="active"><i class="fas fa-star"></i></li>
+                        <li class="active"><i class="fas fa-star"></i></li>
+                        <li class="active"><i class="fas fa-star"></i></li>
+                        <li class="active"><i class="fas fa-star"></i></li>
+                    </ul>
+
+                    <!-- 使用者評論 -->
+                    <p class="mb-0">
+                        檸檬超級酸的!!!!超爽der
+                    </p>
+                </li>
+                <!-- 一則評論結束 -->
+
+                <!-- 以下單純測試用 後端加上去後請刪 -->
+                <li class="review_comment_wrap">
+                    <h4 class="admin_name">怕酸的倫
+                        <span class="comment_date">2022 / 7 / 15</span></h4>
+                    <ul class="rating_star ul_li">
+                        <li class="active"><i class="fas fa-star"></i></li>
+                        <li class="active"><i class="fas fa-star"></i></li>
+                        <li class=""><i class="fas fa-star"></i></li>
+                        <li class=""><i class="fas fa-star"></i></li>
+                        <li class=""><i class="fas fa-star"></i></li>
+                    </ul>
+                    <p class="mb-0">
+                        一點也不甜! 而且太酸了吧!! 負評! 負評! 負評!
+                    </p>
+                </li>
+                <!-- 以上測試用 -->
+
+            </ul>
+        </div>
+
+        <!-- 評分留言系統 -->
+        <div class="col-lg-6 product_rating">
+            <div class="container">
+                <div class="post">
+                  <div class="text">感謝你的評論</div>
+                  <div class="edit">編輯</div>
+                </div>
+                <div class="star-widget">
+                  <input type="radio" name="rate" id="rate-5">
+                  <label for="rate-5" class="fas fa-star"></label>
+                  <input type="radio" name="rate" id="rate-4">
+                  <label for="rate-4" class="fas fa-star"></label>
+                  <input type="radio" name="rate" id="rate-3">
+                  <label for="rate-3" class="fas fa-star"></label>
+                  <input type="radio" name="rate" id="rate-2">
+                  <label for="rate-2" class="fas fa-star"></label>
+                  <input type="radio" name="rate" id="rate-1">
+                  <label for="rate-1" class="fas fa-star"></label>
+
+                  <!-- 使用者評論輸入 -->
+                    <form action="#">
+                        <header></header>
+                        <div class="textarea">
+                            <textarea cols="30" placeholder="在這裡留下評論..."></textarea>
+                        </div>
+                        <div class="btn">
+                            <button type="submit" class="submitBtn">送出</button>
+                        </div>
+                    </form>
+
+                </div>
+              </div>
+              <script>
+                const btn = document.querySelector(".submitBtn");
+                const post = document.querySelector(".post");
+                const widget = document.querySelector(".star-widget");
+                const editBtn = document.querySelector(".edit");
+                btn.onclick = ()=>{
+                    widget.style.display = "none";
+                    post.style.display = "block";
+
+                    editBtn.onclick = ()=>{
+                        widget.style.display = "block";
+                        post.style.display = "none";
+                    }
+                    return false;
+                }
+              </script>
+        </div>
+        
+        
+        
+    </div>
+</body>
+</html>

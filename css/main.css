@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans TC', 'Noto Sans', sans-serif;
+  font-weight: 500;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  background-color: rgba(200, 255, 200, 0.3);
+}
+aside {
+  width: 300px;
+  min-height: 100%;
+}
+main {
+  width: 100%;
+  position: relative;
+}
+/* side-list-start */
+.side-menu {
+  position: fixed;
+  z-index: 10;
+  padding: 50px 0;
+  font-size: 20px;
+  background-color: rgba(100, 200, 100, 0.9);
+  display: flex;
+  flex-direction: column;
+  /* 陰影： 角度 飽和度 亮度 透明度 */
+  box-shadow: 5px 0px 10px hsla(240, 40%, 15%, 0.6);
+  transform: translateX(-100%);
+  transition: 0.3s;
+}
+.side-menu form {
+  display: flex;
+  margin: 0 10px;
+  margin-bottom: 50px;
+  border-radius: 100px;
+  border: 1px solid rgb(255, 255, 255, 0.4);
+}
+.side-menu input,
+.side-menu button {
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+  padding: 5px 10px;
+}
+/* 選取到不會顯示那個外框 */
+.side-menu input,
+.side-menu button:focus {
+  color: #fff;
+  outline: none;
+}
+.side-menu input {
+  width: 230px;
+}
+/* 更改搜尋預設字的顏色 */
+.side-menu input::placeholder {
+  color: #fff;
+}
+/* 把 focus 會出現的 X 按紐拿掉 */
+.side-menu input::-webkit-search-cancel-button {
+  display: none;
+}
+.side-menu button {
+  width: 50px;
+}
+.side-menu label {
+  width: 40px;
+  height: 80px;
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  right: -40px;
+  top: 0;
+  margin: auto;
+  line-height: 80px;
+  text-align: center;
+  border-radius: 0 10px 10px 0;
+}
+#side-menu-switch {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+#side-menu-switch:checked + .side-menu {
+  transform: translateX(0);
+  transition: 0.3s;
+}
+/* 讓箭頭可以轉向 */
+#side-menu-switch:checked + .side-menu label .fa-greater-than {
+  transform: scale(-1);
+}
+.nav-li {
+  width: 100%;
+  position: relative;
+}
+.nav li + li a::before {
+  content: "";
+  position: absolute;
+  border-top: 1px solid rgb(255, 255, 255, 0.4);
+  left: 10px;
+  right: 10px;
+  top: 0;
+}
+/* welcome user */
+.nav li:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+.nav li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin: 10px 0;
+}
+.nav li span {
+  line-height: 2;
+}
+.nav li p {
+  color: #fff;
+}
+.nav li img, .nav li i {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin: 0 10px;
+}
+@media screen and (min-width:1023px) {
+  .side-fixed {
+    top: 50px;
+    position: sticky;
+  }
+  input, ul {
+    font-size: 20px;
+  }
+  .side-menu {
+    transform: translateX(0);
+    position: static;
+    font-size: 20px;
+  }
+  .side-menu label {
+    opacity: 0;
+  }
+  .nav a .fa-solid {
+    margin-right: -1.1em;
+    transform: scale(0);
+    transition: 0.3s;
+  }
+  .nav li:hover .fa-solid {
+    margin-right: 0;
+    transform: scale(1);
+  }
+  .nav li:hover > a {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav li img, .nav li i {
+    width: 40px;
+    height: 40px;
+  }
+}
+/* side-list-end */
+
+/* footer */
+.footer{
+  width: 100%;
+  background-color: rgba(50, 100, 50, 0.5);
+  padding: 50px 0;
+}
+.footer-container{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1366px;
+  margin: auto;
+}
+ul{
+  list-style: none;
+}
+.footer-col{
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  margin: 0 30% 30px 30%;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 30px; /*大標與小標的間距*/
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: rgba(200, 255, 200, 0.9); /*大標線條顏色*/
+  height: 3px;
+  box-sizing: border-box;
+  width: 70px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff; /*icon顏色*/
+  transition: all 0.5s ease;
+}
+.copyright {
+  color: #ffffff;
+  text-align: center;
+}
+
+@media screen and (min-width:1023px) {
+  .footer {
+    transition: 0.3s;
+  }
+  .footer-col{
+    max-width: 50%;
+    margin: 0 0 30px 0;
+  }
+  .footer-col ul li a:hover{
+    color: #ffffff; /*小標選取後顏色*/
+    padding-left: 10px; /*小標選取後移動距離*/
+  }
+  .footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff; /*icon選取後背景顏色*/
+  }
+}
+@media screen and (min-width: 767px){
+  .footer {
+    padding: 70px 0;
+  }
+  .footer-col{
+    width: 50%;
+    margin: 0 0 30px 0;
+  }
+  .footer-col .social-links h4 {
+    margin: 0 20% 30px 20%;
+  }
+}
